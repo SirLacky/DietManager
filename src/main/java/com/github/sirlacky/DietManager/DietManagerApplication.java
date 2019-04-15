@@ -10,4 +10,5 @@ public class DietManagerApplication {
 		SpringApplication.run(DietManagerApplication.class, args);
 	}
 
+
 }

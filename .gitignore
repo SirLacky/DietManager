@@ -170,5 +170,3 @@ idea/
 .idea/
 target/
 *.iml
-.mvn/
-mvn/
