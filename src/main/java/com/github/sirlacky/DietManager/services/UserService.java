@@ -7,6 +7,7 @@ import com.github.sirlacky.DietManager.dtos.UserDTO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -21,16 +22,19 @@ public class UserService {
     private static final Logger logger = LoggerFactory.getLogger(UserService.class);
 
     private UserRepository userRepository;
+    private PasswordEncoder passwordEncoder;
 
     @Autowired
-    public UserService(UserRepository userRepository) {
+    public UserService(UserRepository userRepository, PasswordEncoder passwordEncoder) {
         this.userRepository = userRepository;
+        this.passwordEncoder = passwordEncoder;
     }
 
 
     @Transactional
     public void registerUser(RegistrationFormDTO form) {
         User user = convertToUser(form);
+        user.setPassword(passwordEncoder.encode(user.getPassword()));
 
         logger.info("Rejestracja uzytkownika: " + user);
         userRepository.save(user);

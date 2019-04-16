@@ -11,7 +11,7 @@
 
 <head>
 
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="media/css/style.css">
 
 <title>Edycja Produktu</title>
 
@@ -23,7 +23,7 @@
 
 
 <ul class="header">
-<li id="logo-container"> <img src="logo.png"></li>
+<li id="logo-container"> <img src="media/images/logo.png"></li>
 <li style="float:right"><a href="/logout">Wyloguj</a>
 </li>
 <li style="float:right"><a href="/main" class="active">Podsumowanie</a><br>
@@ -43,9 +43,9 @@
 Kod Produktu: <input type="text" name="productCode"><br><br>
 Nazwa Produktu: <input type="text" name="productName"><br><br>
 Kalorie: <input type="text" name="kcal">[kcal]<br><br>
-Bia³ko: <input type="text" name="whey">[g]<br><br>
-Wêglowodany: <input type="text" name="carbo">[g]<br><br>
-T³uszcz: <input type="text" name="fat">[g]<br><br>
+Biaï¿½ko: <input type="text" name="whey">[g]<br><br>
+Wï¿½glowodany: <input type="text" name="carbo">[g]<br><br>
+Tï¿½uszcz: <input type="text" name="fat">[g]<br><br>
 Gramatura: <input type="text" name="howMuch">[g/ml/sztuki]<br><br>
 <button>Dalej</button>
 </form>

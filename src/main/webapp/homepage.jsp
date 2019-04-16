@@ -11,9 +11,9 @@
 
 <head>
 
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="media/css/style.css">
 
-<title>Strong G³ówna</title>
+<title>Strong Gï¿½ï¿½wna</title>
 
 
 </head>
@@ -23,7 +23,7 @@
 
 
 <ul class="header">
-<li id="logo-container"> <img src="logo.png"></li> 
+<li id="logo-container"> <img src="media/images/logo.png"></li>
 <c:choose>
     
 <c:when test="${empty userID}">
@@ -43,7 +43,7 @@
 
 <!--<style="float:right"><a class="active" href="#about"></style> aktywny przycisk-->
 
-<h1>Witaj na stronie g³ównej</h1>
+<h1>Witaj na stronie gï¿½ï¿½wnej</h1>
 
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh augue, suscipit a, scelerisque sed, lacinia in, mi. Cras vel lorem. Etiam pellentesque aliquet tellus. Phasellus pharetra nulla ac diam. Quisque semper justo at risus. Donec venenatis, turpis vel hendrerit interdum, dui ligula ultricies purus, sed posuere libero dui id orci.</p>
 

@@ -7,28 +7,26 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="../../media/css/style.css">
     <title>Mainboard</title>
 </head>
 <body>
 
 
 <ul class="header">
-    <li id="logo-container"><img src="../../logo.png"></li>
-    <li style="float:right"><a href="/logout">Wyloguj</a>
-    </li>
-    <li style="float:right"><a href="/main" class="active">Podsumowanie</a><br>
-    </li>
+    <li id="logo-container"><img src="../../media/images/logo.png"></li>
+    <li style="float:right"><a href="/logout">Wyloguj</a></li>
+    <li style="float:right"><a href="/main" class="active">Podsumowanie</a><br></li>
 
 </ul>
 
 <h1>Twoja strona główna: </h1>
 
-<button class="button">Dodaj/Edytuj dane personalne</button>
-<button class="button">Dodaj produkt skanujšc kod kreskowy</button>
-<button class="button">Dodaj produkt już wprowadzony do bazy</button>
-<button class="button">Dodaj posiłek</button>
-<button class="button">Edytuj dane produktów/posiłków</button>
+<button type="submit" class="button">Dodaj/Edytuj dane personalne</button>
+<button type="submit" class="button">Dodaj produkt skanujšc kod kreskowy</button>
+<button type="submit" class="button">Dodaj produkt już wprowadzony do bazy</button>
+<button type="submit" class="button">Dodaj posiłek</button>
+<button type="submit" class="button">Edytuj dane produktów/posiłków</button>
 
 <div class="container">
     <div class="boxes">

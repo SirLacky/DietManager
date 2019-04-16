@@ -11,7 +11,7 @@
 
 <head>
 
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="media/css/style.css">
 
 <title>Znaleziono Produkt</title>
 
@@ -23,7 +23,7 @@
 
 
 <ul class="header">
-<li id="logo-container"> <img src="logo.png"></li>
+<li id="logo-container"> <img src="media/images/logo.png"></li>
 <li style="float:right"><a href="/logout">Wyloguj</a>
 </li>
 <li style="float:right"><a href="/main" class="active">Podsumowanie</a><br>
@@ -41,13 +41,13 @@
 <h2>Produkt kod/id: test</h2>
 <ul>
 <li>kcal: <b>test</b> [kcal]</li>
-<li>Bia³ko: <b>test</b> [g]</li>
-<li>T³uszcz: <b>test</b> [g]</li>
-<li>Wêglowodany: <b>test</b> [g]</li>
+<li>Biaï¿½ko: <b>test</b> [g]</li>
+<li>Tï¿½uszcz: <b>test</b> [g]</li>
+<li>Wï¿½glowodany: <b>test</b> [g]</li>
 </ul></div>
 </form>
 <br>
-<h3>Podaj ile zjad³eœ</h3>
+<h3>Podaj ile zjadï¿½eï¿½</h3>
 <input type="tekst" value="howMuch">[g/ml]<br><br>
 <button>Dodaj Produkt</button>
 </form>

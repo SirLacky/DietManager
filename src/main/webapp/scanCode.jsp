@@ -11,7 +11,7 @@
 
 <head>
 
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="media/css/style.css">
 
 <title>Skanowanie kodu</title>
 
@@ -23,7 +23,7 @@
 
 
 <ul class="header">
-<li id="logo-container"> <img src="logo.png"></li>
+<li id="logo-container"> <img src="media/images/logo.png"></li>
 <li style="float:right"><a href="/logout">Wyloguj</a>
 </li>
 <li style="float:right"><a href="/main" class="active">Podsumowanie</a><br>
@@ -33,7 +33,7 @@
 
 <!--<a class="active" aktywny przycisk-->
 
-<h1>Zeskanuj kod kreskowy lub wpisz rêcznie: </h1>
+<h1>Zeskanuj kod kreskowy lub wpisz rï¿½cznie: </h1>
 
 <form method="post">
 <input type="text" name="code">

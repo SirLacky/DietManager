@@ -8,7 +8,6 @@ import java.util.Objects;
 @Table(name = "users")
 @Getter
 @Setter
-@ToString
 @NoArgsConstructor
 @AllArgsConstructor
 public class User {
@@ -17,6 +16,7 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column(unique = true,nullable = false)
+    @OneToOne
     private String username;
     @Column(nullable = false)
     private String password;
@@ -24,6 +24,7 @@ public class User {
     private String firstName;
     @Column(name = "last_name")
     private String lastName;
+
 
 
     @Override
