@@ -7,14 +7,14 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../style.css">
     <title>Mainboard</title>
 </head>
 <body>
 
 
 <ul class="header">
-    <li id="logo-container"><img src="logo.png"></li>
+    <li id="logo-container"><img src="../../logo.png"></li>
     <li style="float:right"><a href="/logout">Wyloguj</a>
     </li>
     <li style="float:right"><a href="/main" class="active">Podsumowanie</a><br>

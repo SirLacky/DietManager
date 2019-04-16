@@ -2,6 +2,7 @@
 <%@ page isELIgnored="false" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="type" uri="http://www.springframework.org/tags/form" %>
 
 <html>
 <head>
@@ -41,13 +42,13 @@
     Imię: <form:input path="firstName"/><br>
     Nazwisko: <form:input path="lastName"/><br>
     Hasło: <form:input path="password"/><br>
-    Powrórz hasło: <form:input path="confirm"
-
+    Powrórz hasło: <form:input path="confirm"/><br>
+<button>Wyślij</button>
 
 </form:form>
 <form method="post">
 
-    Imi�: <input type:"text" name="firstName" placeholder="Imi�"><br>
+    Imię: <input type:type:"text" name="firstName" placeholder="Imi�"><br>
     <br>
     Nazwisko: <input type:"text" name="lastName" placeholder="Nazwisko"><br>
     <br>
