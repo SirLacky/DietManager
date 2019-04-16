@@ -33,19 +33,19 @@ public class RegistrationController {
     @PostMapping //sprawdzanie czy hasla sa prawidlowe oraz czy uzytkownik juz istnieje
     public String processRegistration(@Valid @ModelAttribute("registrationForm") RegistrationFormDTO form, BindingResult result) {
         if (result.hasErrors()) {
-            return "registration-page";
+            return "register";
         }
         if (!checkPasswordEquality(form)) {
             result.rejectValue("password", null, "Hasło powtórzone jest niezgodne");
-            return "registration-page";
+            return "register";
         }
 
         if (!checkIsUsernameAvalible(form)) {
             result.rejectValue("username", null, "Nazwa użytkownika jest już zajęta");
-            return "registration-page";
+            return "register";
         }
         userService.registerUser(form);
-        return "redirect:/index.html";
+        return "redirect:/main";
     }
 
     private boolean checkIsUsernameAvalible(RegistrationFormDTO form) {

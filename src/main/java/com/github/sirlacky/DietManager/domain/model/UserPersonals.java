@@ -16,7 +16,6 @@ public class UserPersonals {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @OneToOne
     private Long id;
 
     private int weight;
@@ -28,6 +27,9 @@ public class UserPersonals {
     private String gender;
 
     private double activity;
+
+    @OneToOne
+    private User user;
 
     @Override
     public boolean equals(Object o) {

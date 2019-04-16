@@ -16,7 +16,6 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column(unique = true,nullable = false)
-    @OneToOne
     private String username;
     @Column(nullable = false)
     private String password;
@@ -25,6 +24,8 @@ public class User {
     @Column(name = "last_name")
     private String lastName;
 
+    @OneToOne(mappedBy = "user")
+    private UserPersonals userPersonals;
 
 
     @Override

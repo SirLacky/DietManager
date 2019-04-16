@@ -14,9 +14,10 @@
 
 <ul class="header">
     <li id="logo-container"><img src="../../media/images/logo.png"></li>
-    <li style="float:right"><a href="/logout">Wyloguj</a></li>
-    <li style="float:right"><a href="/register" class="active">Rejestracja </a><br></li>
-
+    <li style="float:right"><a href="/author">O Autorze</a> </li>
+    <li style="float:right"><a href="/login" class="active">Logowanie</a> </li>
+    <li style="float:right"><a href="/register">Rejestracja </a></li>
+    <li style="float:right"><a href="/homepage">O Aplikacji</a> </li>
 </ul>
 
 <h1>Logowanie: </h1>

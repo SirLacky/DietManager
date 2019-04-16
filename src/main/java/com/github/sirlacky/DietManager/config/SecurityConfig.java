@@ -5,7 +5,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.factory.PasswordEncoderFactories;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
@@ -44,6 +43,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.authorizeRequests()
                 .antMatchers("/media/**").permitAll()
                 .antMatchers("/register").permitAll()
+                .antMatchers("/homepage").permitAll()
+                .antMatchers("/author").permitAll()
+                .antMatchers("/").permitAll()
                 .antMatchers("/login").anonymous()
                 .antMatchers("/user", "/user/**").hasRole("USER")
                 .antMatchers("/admin", "/admin/**").hasRole("ADMIN")
@@ -57,14 +59,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
             .logout()
                 .logoutUrl("/logout")
-                .logoutSuccessUrl("/login")
+                .logoutSuccessUrl("/homepage")
                 .and()
             .csrf()//wylacza potwierdzenie wylogowanie "czy napewno chcesz sie wylogowac"
                 .disable()
             .rememberMe()//remember me pozwala logowac sie uzytkownikomi jesli byl wczesniej zalogowany
                 .key("mójTajnyKluczRememberMe")//haslo do rozszyfrowania ciasteczka
                 .rememberMeParameter("remember-me")//nazwa check boxa "zapamietaj" w formularzu logowania
-                .tokenValiditySeconds(4*7*24*60*60);//czas zycia rememberme
+                .tokenValiditySeconds(7*24*60*60);//czas zycia rememberme
 
 
     }

@@ -14,9 +14,10 @@
 
 <ul class="header">
     <li id="logo-container"><img src="../../media/images/logo.png"></li>
-    <li style="float:right"><a href="/logout">Wyloguj</a></li>
-    <li style="float:right"><a href="/main" class="active">Podsumowanie</a><br></li>
-
+    <li style="float:right"><a href="/author">O Autorze</a> </li>
+    <li style="float:right"><a href="/login">Logowanie</a> </li>
+    <li style="float:right"><a href="/register" class="active">Rejestracja </a></li>
+    <li style="float:right"><a href="/homepage">O Aplikacji</a> </li>
 </ul>
 
 <h1>Rejestracja: </h1>
@@ -26,8 +27,8 @@
     Nazwa użytkownika: <form:input path="username"/><br>
     Imię: <form:input path="firstName"/><br>
     Nazwisko: <form:input path="lastName"/><br>
-    Hasło: <form:input path="password"/><br>
-    Powrórz hasło: <form:input path="confirmedPassword"/><br>
+    Hasło: <form:password path="password"/><br>
+    Powrórz hasło: <form:password path="confirmedPassword"/><br>
     <button type="submit">Wyślij</button>
 
 </form:form>
