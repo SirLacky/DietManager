@@ -8,7 +8,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../../media/css/style.css">
-    <title>Mainboard</title>
+    <title>Menadżer Osobisty</title>
 </head>
 <body>
 
@@ -16,21 +16,24 @@
 <ul class="header">
     <li id="logo-container"><img src="../../media/images/logo.png"></li>
     <li style="float:right"><a href="/logout">Wyloguj</a></li>
-    <li style="float:right"><a href="/main" class="active">Podsumowanie</a><br></li>
+    <li style="float:right"><a href="/main" class="active">Menadżer Osobisty</a><br></li>
 
 </ul>
 
-<h1>Twoja strona główna: </h1>
+<h1>To twoja osobista strona główna! </h1><br>
+<h2>Wybierz akcję:</h2>
 
-<button type="submit" class="button">Dodaj/Edytuj dane personalne</button>
-<button type="submit" class="button">Dodaj produkt skanujšc kod kreskowy</button>
-<button type="submit" class="button">Dodaj produkt już wprowadzony do bazy</button>
-<button type="submit" class="button">Dodaj posiłek</button>
-<button type="submit" class="button">Edytuj dane produktów/posiłków</button>
+<button class="button" href="/personal">Dodaj/Edytuj dane personalne</button>
+<button class="button" href="/scanCode">Dodaj produkt skanujšc kod kreskowy</button>
+<button class="button" href="/addExisting">Dodaj produkt już wprowadzony do bazy/button>
+<button class="button" href="/addProduct">Dodaj posiłek</button>
+<button class="button" href="/chooseToEdit">Edytuj dane produktów/posiłków</button>
+
+<h2>Twoje dane żywnościowe:</h2>
 
 <div class="container">
     <div class="boxes">
-        <h2>Całkowite zapotrzebowanie:</h2>
+        <h3>Całkowite zapotrzebowanie:</h3>
         <form method="get">
             <div>
                 <ul>
@@ -45,7 +48,7 @@
 
     </div>
     <div class="boxes">
-        <h2>Dzisiaj zjedzono:</h2>
+        <h3>Dzisiaj zjedzono:</h3>
         <form method="get">
             <div>
                 <ul>
@@ -60,7 +63,7 @@
 
     </div>
     <div class="boxes">
-        <h2>Pozostało do zjedzenia:</h2>
+        <h3>Pozostało do zjedzenia:</h3>
         <form method="get">
             <div>
                 <ul>

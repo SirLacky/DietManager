@@ -30,7 +30,6 @@
     Hasło: <form:password path="password"/><br>
     Powrórz hasło: <form:password path="confirmedPassword"/><br>
     <button type="submit">Wyślij</button>
-
 </form:form>
 
 </body>

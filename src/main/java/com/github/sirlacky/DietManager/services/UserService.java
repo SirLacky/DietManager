@@ -47,8 +47,6 @@ public class UserService {
         if (username == null) {
             throw new IllegalArgumentException("Nazwa użytkownika musi być podana");
         }
-
-
         Optional<User> optionalUser = userRepository.findByUsername(username);
         User user = optionalUser.orElse(null);
         logger.debug("Znaleziono uzytkownika dla nazwy " + username + " " + user);
