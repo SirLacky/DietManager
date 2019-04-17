@@ -21,7 +21,7 @@
 
 <h1>Dodawanie Posiłku: </h1>
 
-<form:form modelAttribute="addProductForm" method="post">
+<form:form modelAttribute="product" method="post">
     <form:errors path="*"/><br>
     Kod Kreskowy: <form:input path="code"/><br>
     Nazwa Produktu: <form:input path="name"/><br>

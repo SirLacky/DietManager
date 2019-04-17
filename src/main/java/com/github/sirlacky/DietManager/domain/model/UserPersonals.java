@@ -18,15 +18,15 @@ public class UserPersonals {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private int weight;
+    private Integer weight;
 
-    private int height;
+    private Integer height;
 
-    private int age;
+    private Integer age;
 
     private String gender;
 
-    private double activity;
+    private Double activity;
 
     @OneToOne
     private User user;

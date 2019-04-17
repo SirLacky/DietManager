@@ -3,6 +3,7 @@ package com.github.sirlacky.DietManager.domain.model;
 import lombok.*;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 import java.util.Objects;
 
 @Entity
@@ -17,14 +18,20 @@ public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private int code;
+    private Long code;
     private String name;
-    private int calories;
-    private int whey;
-    private int carbs;
-    private int fat;
+    private Double calories;
+    private Double whey;
+    private Double carbs;
+    private Double fat;
     private String type;
-    private int volume;
+    private Double volume;
+    private LocalDateTime whenEaten;
+
+    @PrePersist
+    public void prePersist(){
+        whenEaten = LocalDateTime.now();
+    }
 
     @Override
     public boolean equals(Object o) {

@@ -28,14 +28,16 @@ public class scanCodeController {
     }
 
     @PostMapping
-    public String lookForProductInBase(Product product, BindingResult result) {
+    public String lookForProductInBase(Model model,Product product, BindingResult result) {
+        model.addAttribute("product",new Product());
         if (result.hasErrors()) {
             return "scanCode";
         }
-        Optional<Product> existingProduct = productRepository.findProductByCode(product.getCode());
+        Optional<Product> existingProductOpt = productRepository.findProductByCode(product.getCode());
+        Product existingProduct = existingProductOpt.orElse(null);
         if (existingProduct != null) {
             return "foundProduct";
         }
-        return "addProduct";
+        return "redirect:addProduct";
     }
 }

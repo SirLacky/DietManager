@@ -23,11 +23,11 @@
 <h1>To twoja osobista strona główna! </h1><br>
 <h2>Wybierz akcję:</h2>
 
-<button class="button" href="/personal">Dodaj/Edytuj dane personalne</button>
-<button class="button" href="/scanCode">Dodaj produkt skanujšc kod kreskowy</button>
-<button class="button" href="/addExisting">Dodaj produkt już wprowadzony do bazy/button>
-<button class="button" href="/addProduct">Dodaj posiłek</button>
-<button class="button" href="/chooseToEdit">Edytuj dane produktów/posiłków</button>
+<button class="button" onclick="javascript:document.location.href='/personal'">Dodaj/Edytuj dane personalne</button>
+<button class="button" onclick="javascript:document.location.href='/scanCode'">Dodaj produkt skanując kod kreskowy</button>
+<button class="button" onclick="javascript:document.location.href='/addExisting'">Dodaj produkt już wprowadzony do bazy</button>
+<button class="button" onclick="javascript:document.location.href='/addProduct'">Dodaj posiłek</button>
+<button class="button" onclick="javascript:document.location.href='/chooseToEdit'">Edytuj dane produktów/posiłków</button>
 
 <h2>Twoje dane żywnościowe:</h2>
 
