@@ -25,17 +25,14 @@ public class AddProductController {
         model.addAttribute("product", new Product());
         return "/addProduct";
     }
-
     @PostMapping
     public String saveNewProduct(@Valid @ModelAttribute("product") Product product, BindingResult result) {
-
         if (result.hasErrors()) {
             return "addProduct";
-
         } else {
             productRepository.save(product);
         }
-        return "redirect:/addProduct";
+        return "redirect:/foundProduct";
     }
 
 }

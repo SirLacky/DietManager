@@ -5,13 +5,10 @@
 
 <html>
 <head>
-
     <link rel="stylesheet" href="../../media/css/style.css">
     <title>Znaleziono Produkt</title>
-
 </head>
 <body>
-
 <ul class="header">
     <li id="logo-container"><img src="../../media/images/logo.png"></li>
     <li style="float:right"><a href="/logout">Wyloguj</a></li>
@@ -21,17 +18,12 @@
 <h1>Podsumowanie: </h1>
 
 <div class="container">
-    <form method="get">
-        <div>
-            <h2>Produkt kod/id: test</h2>
-            <ul>
-                <li>Kalorie: <b>test</b> [kcal]</li>
-                <li>Białko: <b>test</b> [g]</li>
-                <li>Tłuszcz: <b>test</b> [g]</li>
-                <li>Węglowodany: <b>test</b> [g]</li>
-            </ul>
-        </div>
-    </form>
+    <c:forEach items="${product}" var="product">
+        <h3>PRODUKT: ${product.id}</h3>
+        <ul>
+           Kalorie: <c:out value="${product.calories}"/>
+        </ul>
+    </c:forEach>
 </div>
 <br>
 <h3>Podaj ile zjadłeś</h3>

@@ -20,7 +20,7 @@
 
 <h1>Zeskanuj kod kreskowy lub wpisz ręcznie: </h1>
 
-<form:form method="post">
+<form:form method="post" modelAttribute="product">
     Zeskanuj lub wpisz kod kreskowy:<br>
     <form:input path="code"/>
     <button type="submit">Skanuj!</button>

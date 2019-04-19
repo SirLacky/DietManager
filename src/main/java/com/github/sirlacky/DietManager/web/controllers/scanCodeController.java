@@ -6,12 +6,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.validation.FieldError;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.validation.Valid;
 import java.util.Optional;
 
 @Controller
@@ -28,7 +27,7 @@ public class scanCodeController {
     }
 
     @PostMapping
-    public String lookForProductInBase(Model model,Product product, BindingResult result) {
+    public String lookForProductInBase(@Valid Model model, Product product, BindingResult result) {
         model.addAttribute("product",new Product());
         if (result.hasErrors()) {
             return "scanCode";
