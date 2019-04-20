@@ -28,7 +28,7 @@ public class UserPersonals {
 
     private Double activity;
 
-    @OneToOne
+    @OneToOne(cascade = {CascadeType.MERGE})
     private User user;
 
     @Override

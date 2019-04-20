@@ -27,7 +27,7 @@ public class UserPersonalsController {
     }
 
     @PostMapping
-    private String editUserPersonalDetails(@ModelAttribute("personal") Model model, @Valid BindingResult result, UserPersonals userPersonals) {
+    private String editUserPersonalDetails(@Valid @ModelAttribute ("personal") UserPersonals userPersonals, BindingResult result, Model model) {
         if (result.hasErrors()) {
             return "personal";
         } else {
