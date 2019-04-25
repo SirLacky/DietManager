@@ -3,7 +3,6 @@ package com.github.sirlacky.DietManager.domain.model;
 import lombok.*;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotEmpty;
 import java.util.Objects;
 
 @Entity

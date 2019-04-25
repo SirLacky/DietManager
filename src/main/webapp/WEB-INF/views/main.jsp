@@ -34,19 +34,19 @@
 <div class="container">
     <div class="boxes">
         <h3>Całkowite zapotrzebowanie:</h3>
-        <form method="get">
             <div>
                 <ul>
-                    <li>PPM: <b>test</b> [kcal]</li>
-                    <li>CPM: <b>test</b> [kcal]</li>
-                    <li>Białko: <b>test</b> [g]</li>
-                    <li>Tłuszcz: <b>test</b> [g]</li>
-                    <li>WW: <b>test</b> [g]</li>
+                    <li><b>Poziom aktywności:</b><c:out value="${personals.activity}"/></li><br>
+                    <li><b>Wiek:</b><c:out value="${personals.age}"/></li><br>
+                    <li><b>Płeć:</b><c:out value="${personals.gender}"/></li><br>
+                    <li><b>Wzrost:</b><c:out value="${personals.height}"/></li><br>
+                    <li><b>Waga:</b><c:out value="${personals.weight}"/></li><br>
+                    <li><b>PPM:</b><c:out value="${ppm}"/></li><br>
+                    <li><b>CPM:</b><c:out value="${cpm}"/></li><br>
                 </ul>
             </div>
-        </form>
-
     </div>
+
     <div class="boxes">
         <h3>Dzisiaj zjedzono:</h3>
         <form method="get">

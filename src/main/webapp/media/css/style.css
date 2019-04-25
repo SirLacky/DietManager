@@ -44,8 +44,8 @@ body {
 
 div {
     background-color: lightblue;
-    width: 150px;
-    padding: 40px;
+    width: 250px;
+    padding: 20px;
     margin: 5px 5px;
     display: inline-block;
     border: 10px solid navy
