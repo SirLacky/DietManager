@@ -76,9 +76,6 @@ public class MainController {
 
     @GetMapping()
     public String displayDetails(Model model) {
-//        model.addAttribute("personals", getAllPersonals());
-//        model.addAttribute("cpm", getCPM());
-//        model.addAttribute("ppm", getPPM());
         return "main";
     }
 

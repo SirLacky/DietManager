@@ -3,7 +3,6 @@ package com.github.sirlacky.DietManager.domain.model;
 import lombok.*;
 
 import javax.persistence.*;
-import java.time.LocalDateTime;
 import java.util.Objects;
 
 @Entity
@@ -26,12 +25,7 @@ public class Product {
     private Double fat;
     private String type;
     private Double volume;
-    private LocalDateTime whenEaten;
 
-    @PrePersist
-    public void prePersist(){
-        whenEaten = LocalDateTime.now();
-    }
 
     @Override
     public boolean equals(Object o) {

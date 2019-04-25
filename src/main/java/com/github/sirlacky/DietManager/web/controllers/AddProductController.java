@@ -1,6 +1,7 @@
 package com.github.sirlacky.DietManager.web.controllers;
 
 import com.github.sirlacky.DietManager.domain.model.Product;
+import com.github.sirlacky.DietManager.domain.model.ProductDetails;
 import com.github.sirlacky.DietManager.domain.repositories.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -26,13 +27,14 @@ public class AddProductController {
         return "/addProduct";
     }
     @PostMapping
-    public String saveNewProduct(@Valid @ModelAttribute("product") Product product, BindingResult result) {
+    public String saveNewProduct(@Valid @ModelAttribute("product") Product product, BindingResult result, Model model) {
         if (result.hasErrors()) {
             return "addProduct";
-        } else {
-            productRepository.save(product);
         }
-        return "redirect:/foundProduct";
+
+        productRepository.save(product);
+        model.addAttribute("productDetails", new ProductDetails());
+        return "foundProduct";
     }
 
 }

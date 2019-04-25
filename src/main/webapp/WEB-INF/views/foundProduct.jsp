@@ -18,18 +18,17 @@
 <h1>Podsumowanie: </h1>
 
 <div class="container">
-    <c:forEach items="${product}" var="product">
-        <h3>PRODUKT: ${product.id}</h3>
+        <h3><b>PRODUKT DO DODANIA:</b><c:out value="${product.name}"/></h3>
         <ul>
-           Kalorie: <c:out value="${product.calories}"/>
+            <li><b>Kalorie:</b><c:out value="${product.calories}"/></li><br>
+            <li><b>Węglowodany:</b><c:out value="${product.carbs}"/></li><br>
+            <li><b>Tłuszcz:</b><c:out value="${product.fat}"/></li><br>
+            <li><b>Białko:</b><c:out value="${product.whey}"/></li><br>
         </ul>
-    </c:forEach>
 </div>
 <br>
 <h3>Podaj ile zjadłeś</h3>
-<input type="tekst" name="howMuch">[g/ml]<br><br>
-<button type="submit">Dodaj Produkt</button>
-</form>
+
 
 </body>
 </html>
