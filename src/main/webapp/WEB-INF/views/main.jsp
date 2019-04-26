@@ -52,7 +52,7 @@
         <form method="get">
             <div>
                 <ul>
-                    <li><b>Kalorie: </b> TEST [kcal]</li>
+                    <li><b>Kalorie: </b> ${calories} [kcal]</li>
                     <li><b>Białko: </b> TEST [g]</li>
                     <li><b>Tłuszcz: </b> TEST [g]</li>
                     <li><b>WW: </b> TEST [g]</li>

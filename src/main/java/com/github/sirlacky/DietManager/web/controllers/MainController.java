@@ -86,11 +86,11 @@ public class MainController {
             return cpm;
         }
     }
-    @ModelAttribute("calories")
-    public double getCalories() {
-        return productRepository.countAllCalories(LocalDate.now());
-    }
 
+    @ModelAttribute("calories")
+    public double getDailyCalories(){
+        return productRepository.countAllCalories();
+    }
     @GetMapping()
     public String displayDetails(Model model) {
         return "main";
