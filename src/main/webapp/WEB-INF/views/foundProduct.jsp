@@ -29,6 +29,12 @@
 <br>
 <h3>Podaj ile zjadłeś</h3>
 
-
+<form:form modelAttribute="productDetails" method="post" action="/foundProduct">
+    <form:hidden path="product.id" value="${product.id}"/>
+    <form:errors path="*"/>
+    <form:input path="howMuch"/><br>
+    <button type="submit">Dodaj produkt</button>
+</form:form>
 </body>
 </html>
+

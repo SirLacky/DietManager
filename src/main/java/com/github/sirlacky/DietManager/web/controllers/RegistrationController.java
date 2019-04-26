@@ -45,7 +45,7 @@ public class RegistrationController {
             return "register";
         }
         userService.registerUser(form);
-        return "redirect:/main";
+        return "redirect:/personal";
     }
 
     private boolean checkIsUsernameAvalible(RegistrationFormDTO form) {

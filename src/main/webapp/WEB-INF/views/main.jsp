@@ -23,11 +23,11 @@
 <h1>To twoja osobista strona główna! </h1><br>
 <h2>Wybierz akcję:</h2>
 
-<button class="button" onclick="javascript:document.location.href='/personal'">Dodaj/Edytuj dane personalne</button>
+<button class="button" onclick="javascript:document.location.href='/personal'">Dodaj dane personalne</button>
 <button class="button" onclick="javascript:document.location.href='/scanCode'">Dodaj produkt skanując kod kreskowy</button>
-<button class="button" onclick="javascript:document.location.href='/addExisting'">Dodaj produkt już wprowadzony do bazy</button>
-<button class="button" onclick="javascript:document.location.href='/addProduct'">Dodaj posiłek</button>
-<button class="button" onclick="javascript:document.location.href='/chooseToEdit'">Edytuj dane produktów/posiłków</button>
+<!--<button class="button" onclick="javascript:document.location.href='/addExisting'">Dodaj produkt już wprowadzony do bazy</button>-->
+<!--<button class="button" onclick="javascript:document.location.href='/addProduct'">Dodaj posiłek</button>-->
+<!--<button class="button" onclick="javascript:document.location.href='/chooseToEdit'">Edytuj dane produktów/posiłków</button>-->
 
 <h2>Twoje dane żywnościowe:</h2>
 
@@ -52,30 +52,13 @@
         <form method="get">
             <div>
                 <ul>
-                    <li>PPM: <b>test</b> [kcal]</li>
-                    <li>CPM: <b>test</b> [kcal]</li>
-                    <li>Białko: <b>test</b> [g]</li>
-                    <li>Tłuszcz: <b>test</b> [g]</li>
-                    <li>WW: <b>test</b> [g]</li>
+                    <li><b>Kalorie: </b> TEST [kcal]</li>
+                    <li><b>Białko: </b> TEST [g]</li>
+                    <li><b>Tłuszcz: </b> TEST [g]</li>
+                    <li><b>WW: </b> TEST [g]</li>
                 </ul>
             </div>
         </form>
-
-    </div>
-    <div class="boxes">
-        <h3>Pozostało do zjedzenia:</h3>
-        <form method="get">
-            <div>
-                <ul>
-                    <li>PPM: <b>test</b> [kcal]</li>
-                    <li>CPM: <b>test</b> [kcal]</li>
-                    <li>Białko: <b>test</b> [g]</li>
-                    <li>Tłuszcz: <b>test</b> [g]</li>
-                    <li>WW: <b>test</b> [g]</li>
-                </ul>
-            </div>
-        </form>
-
     </div>
 </div>
 

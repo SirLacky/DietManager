@@ -13,8 +13,8 @@ public interface ProductRepository extends JpaRepository<Product,Long> {
     Optional<Product> findProductByCode(Long code);
     LocalDate todaysDate = LocalDate.now();
 
-    @Query(value = "SELECT SUM(products.calories) FROM products where products.when_eaten=('2019-04-24');",nativeQuery = true)
-    double countAllCalories();
+    @Query(value = "SELECT SUM(products.calories) FROM products where products.when_eaten=('?1');",nativeQuery = true)
+    double countAllCalories(LocalDate localDate);
 
     @Query(value = "SELECT SUM(products.whey) FROM products where products.when_eaten=('2019-04-24');",nativeQuery = true)
     double countAllWhey();

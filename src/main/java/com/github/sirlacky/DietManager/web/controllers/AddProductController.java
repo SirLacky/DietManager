@@ -31,7 +31,7 @@ public class AddProductController {
         if (result.hasErrors()) {
             return "addProduct";
         }
-
+        //zapis, wyswietlenie, przejscie do widou
         productRepository.save(product);
         model.addAttribute("productDetails", new ProductDetails());
         return "foundProduct";

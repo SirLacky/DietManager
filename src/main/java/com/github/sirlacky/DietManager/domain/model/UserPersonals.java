@@ -17,15 +17,15 @@ public class UserPersonals {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private Integer weight;
+    private Integer weight = 0;
 
-    private Integer height;
+    private Integer height = 0;
 
-    private Integer age;
+    private Integer age = 0;
 
-    private String gender;
+    private String gender = "brak";
 
-    private Double activity;
+    private Double activity = 0.0;
 
     @OneToOne(cascade = {CascadeType.MERGE})
     private User user;

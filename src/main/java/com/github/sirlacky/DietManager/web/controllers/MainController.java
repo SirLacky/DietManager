@@ -2,6 +2,7 @@ package com.github.sirlacky.DietManager.web.controllers;
 
 import com.github.sirlacky.DietManager.domain.model.User;
 import com.github.sirlacky.DietManager.domain.model.UserPersonals;
+import com.github.sirlacky.DietManager.domain.repositories.ProductDetailsRepository;
 import com.github.sirlacky.DietManager.domain.repositories.ProductRepository;
 import com.github.sirlacky.DietManager.domain.repositories.UserPersonalsRepository;
 import com.github.sirlacky.DietManager.domain.repositories.UserRepository;
@@ -12,6 +13,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import java.time.LocalDate;
 
 
 @Controller
@@ -25,6 +28,8 @@ public class MainController {
     UserPersonalsRepository userPersonalsRepository;
     @Autowired
     UserRepository userRepository;
+    @Autowired
+    ProductDetailsRepository productDetailsRepository;
 
 
     @ModelAttribute("personals")
@@ -44,7 +49,11 @@ public class MainController {
         String name = SecurityContextHolder.getContext().getAuthentication().getName();
         User user = userRepository.getByUsername(name);
         UserPersonals byUser = userPersonalsRepository.getByUser(user);
-        if (byUser.getGender().equals("M")) {
+        if (byUser.getGender()=="brak"){
+            double ppm = 0;
+            return ppm;
+        }
+        if(byUser.getGender().equals("M")) {
             double ppm = 88.362 + (13.397 * byUser.getWeight()) + (4.799 * byUser.getHeight()) - (5.677 * byUser.getAge());
             ppm = Math.round(ppm);
             return ppm;
@@ -60,6 +69,10 @@ public class MainController {
         String name = SecurityContextHolder.getContext().getAuthentication().getName();
         User user = userRepository.getByUsername(name);
         UserPersonals byUser = userPersonalsRepository.getByUser(user);
+        if (byUser.getGender()=="brak"){
+            double cpm =0;
+            return cpm;
+        }
         if (byUser.getGender().equals("M")) {
             double ppm = 88.362 + (13.397 * byUser.getWeight()) + (4.799 * byUser.getHeight()) - (5.677 * byUser.getAge());
             double cpm = ppm * byUser.getActivity();
@@ -72,6 +85,10 @@ public class MainController {
             cpm = Math.round(cpm);
             return cpm;
         }
+    }
+    @ModelAttribute("calories")
+    public double getCalories() {
+        return productRepository.countAllCalories(LocalDate.now());
     }
 
     @GetMapping()
