@@ -91,6 +91,22 @@ public class MainController {
     public double getDailyCalories(){
         return productRepository.countAllCalories();
     }
+
+    @ModelAttribute("fat")
+    public double getDailyFat(){
+        return productRepository.countAllFat();
+    }
+
+    @ModelAttribute("carbs")
+    public double getDailyCarbs(){
+        return productRepository.countAllCarbs();
+    }
+
+    @ModelAttribute("whey")
+    public double getDailyWhey(){
+        return productRepository.countAllWhey();
+    }
+
     @GetMapping()
     public String displayDetails(Model model) {
         return "main";

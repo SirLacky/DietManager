@@ -53,9 +53,9 @@
             <div>
                 <ul>
                     <li><b>Kalorie: </b> ${calories} [kcal]</li>
-                    <li><b>Białko: </b> TEST [g]</li>
-                    <li><b>Tłuszcz: </b> TEST [g]</li>
-                    <li><b>WW: </b> TEST [g]</li>
+                    <li><b>Białko: </b> ${whey} [g]</li>
+                    <li><b>Tłuszcz: </b> ${fat} [g]</li>
+                    <li><b>WW: </b> ${carbs} [g]</li>
                 </ul>
             </div>
         </form>
