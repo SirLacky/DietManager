@@ -13,16 +13,16 @@ public interface ProductRepository extends JpaRepository<Product,Long> {
     Optional<Product> findProductByCode(Long code);
     LocalDate todaysDate = LocalDate.now();
 
-    @Query(value = "SELECT sum((p.calories / 100) * pd.how_much) FROM products p JOIN product_details pd ON p.id = pd.product_id JOIN users u ON u.id = pd.who_eatem_id WHERE u.username = 'zmartyniuk' AND pd.when_eaten = '2019-04-25';",nativeQuery = true)
+    @Query(value = "SELECT sum((p.calories / 100) * pd.how_much) FROM products p JOIN product_details pd ON p.id = pd.product_id JOIN users u ON u.id = pd.who_eatem_id WHERE u.username = 'zmartyniuk' AND pd.when_eaten = '2019-05-02';",nativeQuery = true)
     double countAllCalories();
 
-    @Query(value = "SELECT sum((p.whey / 100) * pd.how_much) FROM products p JOIN product_details pd ON p.id = pd.product_id JOIN users u ON u.id = pd.who_eatem_id WHERE u.username = 'zmartyniuk' AND pd.when_eaten = '2019-04-25';",nativeQuery = true)
+    @Query(value = "SELECT sum((p.whey / 100) * pd.how_much) FROM products p JOIN product_details pd ON p.id = pd.product_id JOIN users u ON u.id = pd.who_eatem_id WHERE u.username = 'zmartyniuk' AND pd.when_eaten = '2019-05-02';",nativeQuery = true)
     double countAllWhey();
 
-    @Query(value = "SELECT sum((p.carbs / 100) * pd.how_much) FROM products p JOIN product_details pd ON p.id = pd.product_id JOIN users u ON u.id = pd.who_eatem_id WHERE u.username = 'zmartyniuk' AND pd.when_eaten = '2019-04-25';",nativeQuery = true)
+    @Query(value = "SELECT sum((p.carbs / 100) * pd.how_much) FROM products p JOIN product_details pd ON p.id = pd.product_id JOIN users u ON u.id = pd.who_eatem_id WHERE u.username = 'zmartyniuk' AND pd.when_eaten = '2019-05-02';",nativeQuery = true)
     double countAllCarbs();
 
-    @Query(value = "SELECT sum((p.fat / 100) * pd.how_much) FROM products p JOIN product_details pd ON p.id = pd.product_id JOIN users u ON u.id = pd.who_eatem_id WHERE u.username = 'zmartyniuk' AND pd.when_eaten = '2019-04-25';",nativeQuery = true)
+    @Query(value = "SELECT sum((p.fat / 100) * pd.how_much) FROM products p JOIN product_details pd ON p.id = pd.product_id JOIN users u ON u.id = pd.who_eatem_id WHERE u.username = 'zmartyniuk' AND pd.when_eaten = '2019-05-02';",nativeQuery = true)
     double countAllFat();
 
 }
